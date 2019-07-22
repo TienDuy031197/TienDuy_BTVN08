@@ -1,5 +1,7 @@
 package com.topica.collection;
 
+import java.io.IOException;
+
 public class Circle implements Comparable<Circle> {
 
 	private int radius;
@@ -9,7 +11,7 @@ public class Circle implements Comparable<Circle> {
 		if (radius > 0) {
 			this.radius = radius;
 		} else {
-			System.out.println("Not satisfied!");
+			this.radius = 0;
 		}
 	}
 
@@ -31,11 +33,11 @@ public class Circle implements Comparable<Circle> {
 		return radius;
 	}
 
-	public void setRadius(int radius) {
+	public void setRadius(int radius) throws IOException {
 		if (radius > 0) {
 			this.radius = radius;
 		} else {
-			System.out.println("Not satisfied!");
+			throw new IOException("not satisfied");
 		}
 	}
 

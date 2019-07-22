@@ -3,7 +3,7 @@ package com.topica.collection;
 import java.util.List;
 
 public class HandlerResult {
-	
+
 	public void result(double numUpperBound, double numLowerBound, int number, List<Circle> listCircle) {
 		System.out.println("=====RESULT=====");
 		if (numLowerBound == numUpperBound) {

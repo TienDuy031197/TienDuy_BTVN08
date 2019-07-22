@@ -12,6 +12,7 @@ public class ListCircle {
 	private static Scanner scanner;
 	private static final int LEFT = 0;
 	private static final int RIGHT = 99;
+	private static final int SIZE_RANDOM = 100;
 
 	public static void main(String[] args) {
 
@@ -21,7 +22,7 @@ public class ListCircle {
 		Circle circle;
 
 		for (int i = 0; i < RIGHT + 1; i++) {
-			int radius = random.nextInt(100) + 1;
+			int radius = random.nextInt(SIZE_RANDOM) + 1;
 			circle = new Circle(radius);
 			acreageArray[i] = circle.acreageCircle();
 			listCircle.add(circle);
@@ -37,10 +38,10 @@ public class ListCircle {
 	}
 
 	public static void printList(List<Circle> listCircle) {
-		System.out.println("The list of circles in a radius increases gradually: ");
+		System.out.println("List Circles: ");
 		for (int i = 0; i < listCircle.size(); i++) {
 			System.out.println(
-					"Index: " + i + " " + listCircle.get(i).getRadius() + " " + listCircle.get(i).acreageCircle());
+					"Index: " + i + ", " + listCircle.get(i).getRadius() + ", " + listCircle.get(i).acreageCircle());
 		}
 	}
 
